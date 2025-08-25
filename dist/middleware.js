@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.userMiddleware = void 0;
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const config_1 = require("./config");
+// import { tokenBlacklist } from "./blacklist";
 const userMiddleware = (req, res, next) => {
     const header = req.headers["authorization"];
     const decoded = jsonwebtoken_1.default.verify(header, config_1.JWT_PASSWORD);

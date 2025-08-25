@@ -154,5 +154,10 @@ app.get("/api/v1/brain/:shareLink", (req, res) => __awaiter(void 0, void 0, void
         username: user.username,
         content: content
     });
+    app.post("/api/v1/logout", middleware_1.userMiddleware, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+        res.json({
+            message: "Logged out successfully"
+        });
+    }));
 }));
 app.listen(3000);
